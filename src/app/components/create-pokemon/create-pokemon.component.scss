@@ -1,0 +1,29 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    input{
+        font-family: 'Press Start 2P', cursive;
+        width: 500px;
+        height: 50px;
+        border: rgb(10, 10, 134) dashed 3px;
+        padding: 1rem;
+        &::placeholder{
+            text-transform: uppercase;
+        }
+    }
+    button{
+        background-color: red;
+        border: none;
+        padding: 1rem 4rem;
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 4px 4px 2px rgb(146, 0, 0);
+        &:hover{
+            box-shadow: 4px 4px 2px rgb(146, 0, 0) inset;
+        }
+    }
+}

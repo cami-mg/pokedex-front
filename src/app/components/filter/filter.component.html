@@ -1,0 +1,8 @@
+<div class="select-box">
+    <select name="typesFilter" id="typesFilter" #filter (change)="filteredType()">
+        <option value="all">all</option>
+      <ng-container *ngFor="let type of (filters | orderBy: 'asc')">
+        <option value="{{ type }}">{{ type }}</option>
+    </ng-container>
+    </select>
+</div>

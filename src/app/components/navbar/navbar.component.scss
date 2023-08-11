@@ -1,0 +1,24 @@
+nav{
+    background-color: rgb(209, 16, 16);
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 3.5rem;
+
+    ul{
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        gap: 2rem;
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: rgb(17, 17, 130);
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<!-- <input type="text" #name placeholder="Name"> -->
+<form [formGroup]="createPokemonForm" (ngSubmit)="createPokemon()" enctype="multipart/form-data">
+        <input type="text" name="name" required placeholder="Name..." formControlName="name">
+        <input type="number" name="weight" placeholder="Weight..." formControlName="weight">
+        <input type="number" name="height" placeholder="Height..." formControlName="height">
+        <input type="number" name="experience" placeholder="Experience..." formControlName="experience">
+        <input type="file" name="gif_front" placeholder="Image front..."  (change)="onFileSelected($event)">
+        <input type="file" name="gif_back" placeholder="Image back..."  (change)="onFileSelected($event)">
+        <select name="types" id="types" (change)="onTypeSelected($event)">
+                <option value="null" disabled selected>Choose a type</option>
+              <ng-container *ngFor="let type of (types | orderBy: 'asc')">
+                <option value="{{ type.id_type }}">{{ type.type }}</option>
+            </ng-container>
+            </select>
+        <button type="submit">Create!</button>
+</form>

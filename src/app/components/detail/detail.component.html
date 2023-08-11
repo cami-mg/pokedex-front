@@ -1,0 +1,34 @@
+<div *ngIf="!isLoading" class="detail-container">
+    <div class="card">
+        <div class="card-inner"></div>
+        <div class="card-inner2"></div>
+        <div class="card-black"></div>
+        <div class="card-black2"></div>
+        <div class="card-white"></div>
+        <div class="card-white2"></div>
+        <!-- <div class="card-content-bg"></div> -->
+        <div class="card-content" *ngIf="!isLoading">
+          <div class="container">
+            <h2>{{pokemon[0].name}}</h2>
+            <p><strong>Types:</strong> {{pokemon[0].types}}</p>
+            <p><strong>Height:</strong> {{pokemon[0].height}}</p>
+            <p><strong>Weight:</strong> {{pokemon[0].weight}}</p>
+            <p *ngIf="pokemon[0].experience"><strong>Experience:</strong> {{pokemon[0].experience}}</p>
+          </div>
+          </div>
+          <div class="card-pokemon">
+            <img *ngIf="this.fromHome" src="{{pokemon[0].gif_back}}" alt="{{pokemon[0].name}}">
+            <img *ngIf="!this.fromHome" src="{{url + pokemon[0].gif_back}}" alt="{{pokemon[0].name}}">
+          </div>
+          <div class="card-pokeball" (click)="catchPokemon()"><p>Try to catch me!</p>
+    </div>
+    <div class="circle circle1-bottom-right"></div>
+    <div class="circle circle2-bottom-right"></div>
+    <div class="circle circle1-top-right"></div>
+    <div class="circle circle2-top-right"></div>
+    <div class="circle circle1-bottom-left"></div>
+    <div class="circle circle2-bottom-left"></div>
+    <div class="circle circle1-top-left"></div>
+    <div class="circle circle2-top-left"></div>
+      </div>
+</div>

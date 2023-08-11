@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-inner"></div>
+  <div class="card-inner2"></div>
+  <div class="card-black"></div>
+  <div class="card-black2"></div>
+  <div class="card-white"></div>
+  <div class="card-white2"></div>
+  <!-- <div class="card-content-bg"></div> -->
+  <div class="card-content">
+    <div class="container">
+      <h2>{{ pokemon?.name }}</h2>
+    </div>
+  </div>
+  <div class="card-pokemon">
+    <img
+      *ngIf="home"
+      src="{{ pokemon?.gif_front }}"
+      alt="{{ pokemon?.name }}"
+    />
+    <img
+      *ngIf="!home"
+      src="{{ url + pokemon?.gif_front }}"
+      alt="{{ pokemon?.name }}"
+    />
+  </div>
+  <div
+    *ngIf="home"
+    class="card-pokeball"
+    routerLink="../detail/{{ pokemon?.name }}"
+    [state]="{home:true}"
+  >
+    <p>Choose me!</p>
+  </div>
+  <div
+    *ngIf="!home"
+    class="card-pokeball"
+    routerLink="../detail/{{ pokemon?.id_pokemon }}"
+    [state]="{home:false}"
+  >
+    <p>Choose me!</p>
+  </div>
+  <div class="circle circle1-bottom-right"></div>
+  <div class="circle circle2-bottom-right"></div>
+  <div class="circle circle1-top-right"></div>
+  <div class="circle circle2-top-right"></div>
+  <div class="circle circle1-bottom-left"></div>
+  <div class="circle circle2-bottom-left"></div>
+  <div class="circle circle1-top-left"></div>
+  <div class="circle circle2-top-left"></div>
+</div>

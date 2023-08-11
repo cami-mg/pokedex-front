@@ -1,0 +1,13 @@
+<div class="filtersContainer">
+  <app-filter *ngIf="!isLoading" (filterByType)="filterByType($event)"></app-filter>
+  <app-searchbar *ngIf="!isLoading" (searchByName)="searchByName($event)"></app-searchbar>
+  <app-button *ngIf="!isLoading" (function)="resetFilters()"  text="Reset"></app-button>
+</div>
+<app-spinner *ngIf="isLoading"></app-spinner>
+<div *ngIf="!isLoading">
+  <div class="cards-container">
+    <ng-container  *ngFor="let pokemon of (pokemons | orderBy: 'asc':'name')">
+      <app-card [pokemon]="pokemon"></app-card>
+    </ng-container>
+  </div>
+</div>

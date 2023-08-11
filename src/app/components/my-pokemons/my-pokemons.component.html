@@ -1,0 +1,8 @@
+<p *ngIf="isLoading">Loading!</p>
+<div *ngIf="!isLoading">
+  <div class="cards-container">
+    <ng-container  *ngFor="let pokemon of (pokemons | orderBy: 'asc':'name')">
+      <app-card  [home]="false" [pokemon]="pokemon"></app-card>
+    </ng-container>
+  </div>
+</div>
