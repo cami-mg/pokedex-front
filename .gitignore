@@ -170,3 +170,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#enviroment
+enviroments/enviroment.prod.ts
+enviroments/enviroment.ts
