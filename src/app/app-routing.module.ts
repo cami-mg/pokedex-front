@@ -10,7 +10,7 @@ import { CollectionComponent } from './components/collection/collection.componen
 const routes: Routes = [
   {
     component: HomeComponent,
-    path: ''
+    path: '/'
   },
   {
     component: AboutComponent,
