@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   BASE_URL: "https://pokeapi.co/api/v2/",
-  BACK_URL: "http://localhost/pokedex/"
+  BACK_URL: "https://pokemon-back.000webhostapp.com"
 };
 
 /*
