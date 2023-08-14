@@ -19,6 +19,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { MyPokemonsComponent } from './components/my-pokemons/my-pokemons.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { CollectionComponent } from './components/collection/collection.component';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CollectionComponent } from './components/collection/collection.componen
     CreatePokemonComponent,
     MyPokemonsComponent,
     SpinnerComponent,
-    CollectionComponent
+    CollectionComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,7 @@
-<p>collection works!</p>
+<div *ngIf="!isLoading">
+    <div class="cards-container">
+      <ng-container  *ngFor="let pokemon of pokemons">
+        <app-card [pokemon]="pokemon"></app-card>
+      </ng-container>
+    </div>
+  </div>

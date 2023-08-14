@@ -1,4 +1,5 @@
 <div *ngIf="!isLoading" class="detail-container">
+  <app-toast *ngIf="loadMessage" [caught]="caught" [message]="message"></app-toast>
     <div class="card">
         <div class="card-inner"></div>
         <div class="card-inner2"></div>

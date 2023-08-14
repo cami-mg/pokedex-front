@@ -19,7 +19,10 @@ export class DetailComponent implements OnInit {
     "Your pokemon lost! You have to train harder.",
     "Pokemon captured!",
     "New pokemon added to your collection!"
-  ]
+  ];
+  message:any;
+  caught:boolean = false;
+  loadMessage:boolean = false;
 
   constructor(private route:Router, private activatedRoute: ActivatedRoute, private PokemonsService: PokemonsService) { 
     this.fromHome = this.route.getCurrentNavigation()?.extras.state?.['home'];
@@ -61,10 +64,32 @@ export class DetailComponent implements OnInit {
     formData.append('gif_front', this.pokemon[0].gif_front);
     this.PokemonsService.catchPokemon(formData)
     .subscribe(res => {
-      console.log("caught")
+      if(res == "caught"){
+        this.message = this.messages[random];
+        console.log(this.messages[random]);
+        this.caught = true;
+        this.loadMessage = true;
+        setTimeout(() => {
+          this.loadMessage = false;
+        }, 2000);
+      }else{
+        this.message = res;
+        console.log(res)
+        this.caught = false;
+        this.loadMessage = true;
+        setTimeout(() => {
+          this.loadMessage = false;
+        }, 2100);
+      }
     });
   }else{
-    console.log(this.messages[random]);
+    this.message = this.messages[random];
+        console.log(this.messages[random])
+        this.caught = false;
+        this.loadMessage = true;
+        setTimeout(() => {
+          this.loadMessage = false;
+        }, 2100);
   }
   }
 
