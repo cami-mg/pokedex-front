@@ -9,10 +9,6 @@ import { CollectionComponent } from './components/collection/collection.componen
 
 const routes: Routes = [
   {
-    component: HomeComponent,
-    path: '/'
-  },
-  {
     component: AboutComponent,
     path: 'about'
   },
@@ -30,6 +26,9 @@ const routes: Routes = [
   },
   {component: CollectionComponent,
   path: 'collection'
+  },{
+    component: HomeComponent,
+    path: ''
   }
 ];
 
